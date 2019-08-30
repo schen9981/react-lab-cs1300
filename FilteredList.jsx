@@ -49,7 +49,7 @@ class FilteredList extends Component {
   render() {
     return (
       <div className="filter-list">
-        <h1>Produce Search</h1>
+        <h1>Cereal Search</h1>
         {/* TODO: Add more menu items with onSelect handlers*/}
         <DropdownButton id="typeDropdown" title={"Type"}>
           <MenuItem eventKey="all" onSelect={this.onSelectFilterType}>

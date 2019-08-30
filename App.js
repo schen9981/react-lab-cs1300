@@ -4,18 +4,18 @@ import HelloWorld from "./HelloWorld";
 import Counter from "./Counter";
 
 const produce = [
-  { name: "Apple", type: "Fruit" },
-  { name: "Pineapple", type: "Fruit" },
-  { name: "Banana", type: "Fruit" },
-  { name: "Pear", type: "Fruit" },
-  { name: "Strawberry", type: "Fruit" },
-  { name: "Orange", type: "Fruit" },
-  { name: "Lettuce", type: "Vegetable" },
-  { name: "Cucumber", type: "Vegetable" },
-  { name: "Eggplant", type: "Vegetable" },
-  { name: "Squash", type: "Vegetable" },
-  { name: "Bell pepper", type: "Vegetable" },
-  { name: "Onion", type: "Vegetable" }
+  { name: "Apple Jacks", type: "Circular" },
+  { name: "Banana Nut Cheerios", type: "Circular" },
+  { name: "Cookie Crisps", type: "Circular" },
+  { name: "Honey Nut Cheerios", type: "Circular" },
+  { name: "Fruit Loops", type: "Circular" },
+  { name: "Reeses Puffs", type: "Circular" },
+  { name: "Captain Crunch", type: "Square" },
+  { name: "Cinnamon Toast Crunch", type: "Square" },
+  { name: "Golden Grahams", type: "Square" },
+  { name: "Chex", type: "Square" },
+  { name: "Life", type: "Square" },
+  { name: "Frosted Mini Wheats", type: "Square" }
 ];
 
 class App extends Component {
