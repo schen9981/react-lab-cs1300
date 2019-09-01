@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class HelloWorld extends Component {
-    render() {
-        return (
-        	/*'TODO (HelloWorld): Add a line such that "Hello World!" is displayed on your webpage!*/
-        );
-    }
+  render() {
+    return (
+      <h1>
+        {/* 'TODO (HelloWorld): Add a line such that "Hello World!" is displayed on your webpage! */}
+      </h1>
+    );
+  }
 }
 
 export default HelloWorld;
