@@ -27,24 +27,24 @@ class FilteredList extends Component {
   };
 
   /*
-   * You will pass this function into a builtin filter() function. filter() calls this function on every element in the
-   * list. If filterItem is true for a given element, filter() will add that element to its return list. This function
-   * should account for both the selected filter type and the current search state.
-   *
+   * This function should determine whether the item being passed in matches the type
+   * that we are filtering on. Remember that the selected type we are filtering on is stored
+   * in this.state!
    * Input: An element from your List component
    * Output: true or false
    */
   matchesFilterType = item => {
-    // TODO: Add condition to check if selected filter type is "all" and return appropriate boolean value
+    // TODO: add conditions to check if item type is equal to selected type
+  }
 
-    // TODO: Add condition to check if selected filter type is equal to item's type and return appropriate boolean value
-
-    // TODO: If all other conditions fail, return appropriate boolean value
-
-    // Use this return statement to search on top of your filtering
-    // Hint: search() returns -1 if no match is found
-    return item.name.toLowerCase().search(this.state.search) !== -1;
-  };
+  /*
+   * The function is passed into a builtin filter() function. filter() calls this function on every element
+   * in the list. If this fucntion returns true for a given element, filter() will add that element to its
+   * return list.
+   */
+  filterAndSearch = item => {
+    return item.name.toLowerCase().search(this.state.search) !== -1 && this.matchesFilterType(item);
+  }
 
   render() {
     return (
@@ -57,7 +57,7 @@ class FilteredList extends Component {
           </Dropdown.Item>
         </DropdownButton>
         <input type="text" placeholder="Search" onChange={this.onSearch} />
-        <List items={this.props.items.filter(this.matchesFilterType)} />
+        <List items={this.props.items.filter(this.filterAndSearch)} />
       </div>
     );
   }
